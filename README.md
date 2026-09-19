@@ -1,28 +1,19 @@
-# aurex-web-internship-Rizwan
-1st Week task from aurex-web-internship
+# AUREX Web Internship - Personal Portfolio
 
 **Intern Name:** Rizwan Tariq
 **Domain:** Full-Stack Web Development
-**Week:** Week 1
+**Week:** Week 2
 
-## Task Description
-This repository contains a Personal Profile webpage built to demonstrate a foundational understanding of clean HTML structure, hierarchy, and semantic elements. The task involved setting up a local development environment, initializing version control, and structuring a multi-section webpage without relying on any CSS styling. 
+## Live Deployment
+**Live URL:** [Insert your exact GitHub Pages link here, e.g., https://rizuu2080.github.io/aurex-web-internship-Rizwan]
 
-## Technologies Used
-* HTML5
-* Git
-* GitHub
-* Visual Studio Code
+## CSS Features & Layout Techniques Implemented
+* **Flexbox:** Utilized `display: flex` for the navigation menu to ensure smooth alignment and spacing of links using `gap` and `flex-direction`.
+* **CSS Grid:** Applied `display: grid` to establish the overall page structure on desktop views and to perfectly align the profile image with the text in the "About Me" section.
+* **Responsive Web Design:** Implemented a mobile-first approach, using `@media` queries to adapt the layout seamlessly across mobile, tablet, and desktop viewports.
+* **The CSS Box Model & UI:** Managed content spacing, borders, padding, and margins to create a clean visual hierarchy and consistent color choices.
 
-## How to Run the Project Locally
-1. Clone this repository to your local machine or download the files.
-2. Open the project folder in your computer's file explorer.
-3. Double-click the `index.html` file to open it directly in your default web browser (e.g., Google Chrome or Microsoft Edge). No local server or deployment is required.
-
-## Key Learnings
-* **Version Control:** Successfully initialized a local Git repository, made structured commits, and pushed the code to a remote GitHub repository.
-* **Semantic HTML:** Gained hands-on experience using semantic structural tags like `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, and `<footer>` to logically organize content.
-* **Accessibility Fundamentals:** Learned to implement basic web accessibility features, such as linking `<label>` tags to form inputs and adding descriptive `alt` attributes to images.
-
-## Difficulties & Blockers Encountered
-* **Styling Restrictions:** It was an interesting challenge to build a complete webpage relying purely on HTML for hierarchy and flow, actively resisting the habit of adding inline or external CSS to fix visual spacing.
+## Key Learnings & Challenges
+* **Responsive Layouts:** Gained hands-on experience structuring a fluid layout that renders properly across all mandated viewports (mobile, tablet, desktop).
+* **Grid vs. Flexbox:** Figuring out when to use Flexbox (for 1-dimensional component alignment like nav bars) versus CSS Grid (for 2-dimensional overall page layouts) was a significant learning milestone.
+* **Challenges Faced:** The main difficulty during the responsive design process was adjusting grid templates and flex wrapping inside media queries to ensure the UI elements didn't break or overlap when transitioning between tablet and mobile views.
