@@ -1,0 +1,131 @@
+/* --- Modern Developer Dark Theme (CSS Variables) --- */
+:root {
+    --primary-cyan: #38bdf8;
+    --primary-indigo: #818cf8;
+    --bg-dark: #0f172a;
+    --card-bg: #1e293b;
+    --text-muted: #cbd5e1;
+    --text-bright: #f8fafc;
+    --border-subtle: #334155;
+    --gradient-btn: linear-gradient(90deg, #0284c7, #4f46e5);
+    --gradient-btn-hover: linear-gradient(90deg, #0369a1, #4338ca);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-muted);
+    background-color: var(--bg-dark);
+    padding: clamp(15px, 3vw, 40px); /* Fluid UI padding */
+}
+
+/* --- The CSS Box Model & Elevated UI --- */
+header, nav, section, footer {
+    background: var(--card-bg);
+    padding: clamp(20px, 4vw, 30px);
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border-subtle);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+}
+
+/* Fluid Typography for headings */
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    background: linear-gradient(90deg, var(--primary-cyan), var(--primary-indigo));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 15px;
+}
+
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); color: var(--text-bright); margin-bottom: 15px; }
+h3 { color: var(--text-bright); margin-bottom: 15px; }
+p, li { margin-bottom: 10px; }
+
+/* --- Advanced CSS Grid Implementation --- */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.project-item {
+    background: var(--bg-dark);
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-subtle);
+}
+
+/* --- Flexbox Layouts (Navigation) --- */
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--primary-cyan);
+    font-weight: 600;
+}
+
+/* --- General Styling --- */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 3px solid var(--primary-cyan);
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0 15px;
+    background-color: var(--bg-dark);
+    color: var(--text-bright);
+    border: 1px solid var(--border-subtle);
+    border-radius: 6px;
+}
+
+input:focus, textarea:focus { outline: none; border-color: var(--primary-cyan); }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px; text-align: left; border-bottom: 1px solid var(--border-subtle); }
+th { color: var(--primary-cyan); }
+
+button {
+    background: var(--gradient-btn);
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* --- Desktop & Tablet Layouts --- */
+@media (min-width: 768px) {
+    #about {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 30px;
+        align-items: center;
+    }
+}
+@media (min-width: 1024px) {
+    body { max-width: 1100px; margin: 0 auto; }
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+    #about, #projects, #experience, #contact { grid-column: 1 / -1; }
+}

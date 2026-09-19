@@ -1,0 +1,58 @@
+/* --- Keyframe Animations --- */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply staggered fade-in */
+header, nav, section, footer {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0; 
+}
+
+header { animation-delay: 0.1s; }
+nav { animation-delay: 0.2s; }
+section:nth-of-type(1) { animation-delay: 0.3s; }
+section:nth-of-type(2) { animation-delay: 0.4s; }
+section:nth-of-type(3) { animation-delay: 0.5s; }
+section:nth-of-type(4) { animation-delay: 0.6s; }
+section:nth-of-type(5) { animation-delay: 0.7s; }
+footer { animation-delay: 0.8s; }
+
+/* --- UI Micro-Interactions (Transitions & Hover States) --- */
+.project-item {
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-8px);
+    border-color: var(--primary-cyan);
+}
+
+button {
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+button:hover {
+    background: var(--gradient-btn-hover);
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+nav a {
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: var(--primary-indigo);
+    text-decoration: underline;
+}
