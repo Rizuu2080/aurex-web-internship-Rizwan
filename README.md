@@ -5,7 +5,7 @@
 **Week:** Week 2
 
 ## Live Deployment
-**Live URL:** [Insert your exact GitHub Pages link here, e.g., https://rizuu2080.github.io/aurex-web-internship-Rizwan]
+**Live URL:** https://rizuu2080.github.io/aurex-web-internship-Rizwan/ 
 
 ## CSS Features & Layout Techniques Implemented
 * **Flexbox:** Utilized `display: flex` for the navigation menu to ensure smooth alignment and spacing of links using `gap` and `flex-direction`.
