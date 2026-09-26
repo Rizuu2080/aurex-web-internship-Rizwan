@@ -1,121 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/animations.css">
     <meta charset="UTF-8">
-    <title>Personal Profile | Web Developer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager | Rizwan Tariq</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    
-    <header>
-        <h1>Rizwan Tariq</h1>
-        <p>Full-Stack Web Developer Intern</p>
-    </header>
-    
-    <nav>
-        <h2>Navigation</h2>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    
-    <main>       
-        
-        <section id="about">
-           
-            <img src="https://ui-avatars.com/api/?name=Rizwan+Tariq&background=38bdf8&color=0f172a&size=200" alt="Avatar of Rizwan Tariq">
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>Hello! I am a passionate web developer eager to learn and build applications. I am currently completing my third week in the AUREX engineering internship.</p>
-            </div>
-        </section>
-        
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Frontend:</strong> HTML5, CSS3 & Responsive Web Design</li>
-                <li><strong>Backend:</strong> Node.js, Express.js, PHP, TypeScript</li>
-                <li><strong>Databases:</strong> MySQL, MongoDB</li>
-                <li><strong>Infrastructure & Tools:</strong> Docker, AWS, Redis, Apache Kafka, Git & GitHub</li>
-            </ul>
-        </section>   
-        
-        <section id="education">
-            <h2>Education</h2>
-            <article>
-                <h3>University of the Punjab</h3>
-                <p>Bachelor's Degree in Information Technology</p>
-                <p>Graduation Year: 2026</p>
-            </article>
-        </section> 
-        
-        <section id="experience">
-            <h2>Experience</h2>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Role</th>
-                        <th>Organization</th>
-                        <th>Duration</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Full-Stack Engineering Intern</td>
-                        <td>AUREX</td>
-                        <td>Present</td>
-                    </tr>
-                    
-                </tbody>
-            </table>
-        </section>  
-       <section id="projects">
-            <h2>Project Showcase</h2>
-            <div class="gallery">
-                <article class="project-item">
-                    <h3>Apni Chakki E-Commerce</h3>
-                    <p>Engineered the backend infrastructure, API endpoints, and relational database schema using PHP and MySQL.</p>
-                </article>
-                <article class="project-item">
-                    <h3>URL Shortener</h3>
-                    <p>Developed a high-performance URL shortener implementing Redis for database caching to optimize read operations.</p>
-                </article>
-                <article class="project-item">
-                    <h3>Serverless Checkout API</h3>
-                    <p>Created an event-driven serverless checkout API utilizing AWS RDS, SQS, SNS, and two Lambda functions, achieving sub-100ms warm start response times.</p>
-                </article>
-            </div>
-        </section>   
-        
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <form action="#" method="POST">
-                <label for="name">Full Name:</label>
-                <input type="text" id="name" name="user_name" required>
-                <br><br>
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="user_email" required>
-                <br><br>
+    <main class="app-container">
+        <header>
+            <h1>Task Manager</h1>
+            <p>Week 4 - JavaScript & DOM Manipulation</p>
+        </header>
 
-                <label for="message">Your Message:</label>
-                <textarea id="message" name="user_message" rows="4" required></textarea>
-                <br><br>
-
-                <button type="submit">Send Message</button>
+        <!-- Form for Adding & Validating Tasks -->
+        <section class="task-form-section">
+            <form id="task-form">
+                <input type="text" id="task-input" placeholder="What needs to be done?" autocomplete="off">
+                <button type="submit" id="add-task-btn">Add Task</button>
             </form>
+            <span id="error-message" class="error-hidden">Task cannot be empty!</span>
         </section>
 
-    </main>  
-    
-    <footer>
-        <p>&copy; 2026 Rizwan Tariq. Created for the AUREX Internship.</p>
-    </footer>
+        <!-- Filtering Buttons -->
+        <section class="task-filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="pending">Pending</button>
+            <button class="filter-btn" data-filter="completed">Completed</button>
+        </section>
 
+        <!-- Dynamic Task List -->
+        <section class="task-list-section">
+            <ul id="task-list">
+                <!-- Tasks will be injected here via JavaScript -->
+                
+                <!-- Example of the HTML your JavaScript will generate:
+                <li class="task-item">
+                    <span class="task-text">Learn JavaScript DOM</span>
+                    <div class="task-actions">
+                        <button class="icon-btn complete-btn">✓</button>
+                        <button class="icon-btn edit-btn">✎</button>
+                        <button class="icon-btn delete-btn">✗</button>
+                    </div>
+                </li>
+                -->
+            </ul>
+        </section>
+    </main>
+    
+    <script src="scripts/main.js"></script>
 </body>
 </html>
