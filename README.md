@@ -1,19 +1,29 @@
-# AUREX Web Internship - Personal Portfolio
+# AUREX Web Internship - Task Management Application
 
 **Intern Name:** Rizwan Tariq
 **Domain:** Full-Stack Web Development
-**Week:** Week 3
+**Week:** Week 4
+**Live Deployment:** [https://rizuu2080.github.io/aurex-web-internship-Rizwan/](https://rizuu2080.github.io/aurex-web-internship-Rizwan/)
 
-## Live Deployment
-**Live URL:** https://rizuu2080.github.io/aurex-web-internship-Rizwan/
+## Technologies Used
+* HTML5
+* CSS3 (CSS Variables, Flexbox, Mobile-First Design)
+* Vanilla JavaScript (ES6+)
+* Browser `localStorage` API
 
-## CSS Grid Layouts & Keyframe Animations Implemented
-* **Advanced CSS Grid:** Implemented a multi-column project showcase using `grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))` to create a dynamic layout for my backend projects (Apni Chakki, URL Shortener, and Serverless Checkout API). 
-* **Keyframe Animations:** Created a custom `@keyframes fadeInUp` animation with staggered `animation-delay` properties to provide a smooth, cascading fade-in effect for all page sections on initial load.
-* **UI Micro-Interactions:** Applied smooth CSS transitions for hover states, including card elevation (`transform: translateY`) and button scaling effects to enhance modern UI/UX.
-* **Clean Architecture:** Refactored styles into separate `main.css` and `animations.css` files, utilizing CSS Custom Properties (variables) to efficiently maintain the dark theme.
+## Features Implemented
+* **CRUD Operations:** Users can dynamically add, edit, delete, and mark tasks as complete.
+* **Data Persistence:** Tasks are serialized using `JSON.stringify()` and stored in `localStorage`, persisting through page refreshes.
+* **State Filtering:** Integrated sorting buttons to view 'All', 'Pending', or 'Completed' tasks.
+* **Form Validation:** Prevents empty task creation and renders real-time error messaging.
 
-## Performance & Responsive Testing Outcomes
-* **Mobile & Desktop Adaptability:** Tested extensively across simulated mobile, tablet, and desktop viewports. 
-* **Fluid UI:** The integration of fluid typography (`clamp()`) combined with the `auto-fit` grid ensures perfect responsive adaptability with zero visual breaks or horizontal scrollbars across all screen sizes.
-* **Rendering Performance:** Verified that all CSS transitions and the staggered keyframe animations render smoothly on the live deployment without any layout shifts or visual glitches.
+## Completed JavaScript Exercises
+* **Variables:** Utilized `const` for static DOM elements and `let` for mutable state arrays.
+* **Conditions:** Implemented `if/else` logic for input validation and determining filtering criteria.
+* **Loops:** Applied `.forEach()` array methods to iterate through tasks and generate dynamic HTML nodes.
+* **Functions:** Structured code with modular functional declarations (`renderTasks`, `saveTasks`) and arrow functions for event handlers.
+* **Arrays & Objects:** Maintained application state using an array of structured task objects containing unique IDs, text payloads, and boolean completion statuses.
+
+## Challenges Faced & Learnings
+* **Event Delegation:** Initially, attaching event listeners directly to dynamically created buttons caused issues when tasks were re-rendered. I learned to use event delegation by attaching a single listener to the parent `<ul>` to successfully handle clicks on dynamic children.
+* **State vs. DOM Synchronization:** Ensuring that the `tasks` array, the `localStorage` payload, and the visual DOM stayed perfectly synchronized required careful sequencing of the `saveTasks()` and `renderTasks()` functions.
