@@ -5,7 +5,7 @@
 **Phase:** Month 2 - Week 1
 
 ## Live Deployment
-**Live URL:** [Insert your live deployment link here]
+**Live URL:** https://aurex-web-internship-rizwan.vercel.app/
 
 ## Project Overview
 This project is a reconstruction of the Month 1 JavaScript Task Manager into a modern, component-driven React application[cite: 9]. It utilizes the Vite build system for an optimized development environment and focuses on React fundamentals, including JSX, component architecture, state management, and props[cite: 8].
